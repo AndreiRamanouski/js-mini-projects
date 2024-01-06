@@ -42,14 +42,15 @@ function validateInputAndAction(input) {
     setMessage('Game finished. Start again');
     return false;
   }
-  if (!input) {
-    setMessage('No number 🥲');
-    return false;
-  }
   if (score <= 0) {
     setMessage('You lost. Play again');
     return false;
   }
+  if (!input) {
+    setMessage('No number 🥲');
+    return false;
+  }
+  
   if (input < 1 || input > 20) {
     setMessage('The guess should be between 0 and 20');
     return false;
